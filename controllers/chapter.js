@@ -10,6 +10,11 @@ module.exports = {
           res.json(dbChapter);
         });
     },
+    create: function(req, res) {
+      db.Chapter.create(req.body).then(function(dbChapter) {
+        res.json(dbChapter);
+      })
+    },
 
     delete: function(req, res) {
       db.Chapter.remove({ _id: req.params.id }).then(function(dbChapter) {

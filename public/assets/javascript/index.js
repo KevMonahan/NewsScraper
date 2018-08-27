@@ -100,9 +100,10 @@ $(document).ready(function() {
     }
   
     function handleChapterScrape() {
+      console.log("This is being hit.");
       // handles user wanting to scrape new chapters
       $.get("/api/fetch").then(function(data) {
-        
+        console.log("Definitely been hit.");
         initPage();
         //alerts user of unique chapters saved.
         bootbox.alert($("<h3 class='text-center m-top-80'>").text(data.message));

@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var chapterSchema = new Schema({
-    book: {
+    bookTitle: {
         type: String,
         required: true,
         unique: { index: { unique: true } }
@@ -12,9 +12,12 @@ var chapterSchema = new Schema({
         type: String,
         required: true
     },
-    url: {
-        type: String,
-        required: true
+    // url: {
+    //     type: String,
+    //     required: true
+    // },
+    translator: {
+        type: String
     },
     date: {
         type: Date,
